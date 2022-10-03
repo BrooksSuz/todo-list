@@ -22,3 +22,7 @@ body {
 .todo-container {
   display: flex;
 }
+
+label {
+  align-self: flex-start;
+}
