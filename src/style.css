@@ -12,6 +12,10 @@ body {
   background-color: black;
 }
 
+header {
+  align-self: flex-start;
+}
+
 a {
   text-decoration: none;
   color: inherit;
