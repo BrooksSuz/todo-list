@@ -13,11 +13,15 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: column;
   margin-top: 1px;
   align-self: flex-start;
 }
 
 a {
+  display: flex;
+  justify-content: center;
   border: 1px solid white;
   color: inherit;
   text-decoration: none;
