@@ -1,2 +1,2 @@
 import "./style.css"; 
-import btnCreate from './dom.js'; 
+import './dom.js'; 

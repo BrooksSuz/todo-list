@@ -39,5 +39,15 @@ a {
 .todo-container {
   width: 100vw;
   display: flex;
+  align-items: center;
   flex: 2;
+}
+
+.todo-container p {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1; 
 }
