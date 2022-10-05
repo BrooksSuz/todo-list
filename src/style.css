@@ -13,12 +13,14 @@ body {
 }
 
 header {
+  margin-top: 1px;
   align-self: flex-start;
 }
 
 a {
-  text-decoration: none;
+  border: 1px solid white;
   color: inherit;
+  text-decoration: none;
 }
 
 #main-container {

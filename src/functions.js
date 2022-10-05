@@ -13,12 +13,26 @@ export function createToDo() {
     inputDescription.value, 
     inputDueDate.value, 
     inputPriority.value); 
-
-  return arrToDo.push(newToDo); 
-}; 
-
+    
+    return arrToDo.push(newToDo); 
+  }; 
+  
 export function toDoToDom() {
   let pToDo = document.createElement('p'); 
   pToDo.textContent = `${arrToDo[arrToDo.length - 1].title}`; 
   toDoContainer.appendChild(pToDo); 
-}; 
+};
+
+export function addProjectDOM() {
+  for (let i = 0; i < arrToDo.length; i++) {
+    let pToDo = document.createElement('p'); 
+    pToDo.textContent = `${arrToDo[i].title}`; 
+    toDoContainer.appendChild(pToDo); 
+  }; 
+};
+
+export function removeProjectDOM() {
+  while (toDoContainer.firstChild) {
+    toDoContainer.removeChild(toDoContainer.lastChild); 
+  } 
+};
