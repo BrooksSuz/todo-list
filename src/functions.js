@@ -8,7 +8,7 @@ export function createToDo() {
   const inputDescription = document.getElementById('description'); 
   const inputDueDate = document.getElementById('due-date'); 
   const inputPriority = document.getElementById('priority'); 
-  const newToDo = new ToDo(
+  let newToDo = new ToDo(
     inputTitle.value, 
     inputDescription.value, 
     inputDueDate.value, 
@@ -72,8 +72,23 @@ export function addNewProjectHeader() {
   const projectName = prompt('Name your project'); 
   const headProjectsContainer = document.querySelector('.projects-container'); 
   const aAddProject = document.querySelector('.add-project'); 
-
+  
   newA.textContent = projectName; 
-
+  newA.href = '#'; 
+  
   headProjectsContainer.insertBefore(newA, aAddProject); 
+
+  function saveProject() {
+    localStorage.setItem(newA.textContent, newA.textContent); 
+  }
+
+  saveProject(); 
+}
+
+export function saveToDo() {
+  const newestToDo = arrToDo[arrToDo.length - 1]; 
+  localStorage.setItem(`toDo-${arrToDo.length}-title`, newestToDo.title); 
+  localStorage.setItem(`toDo-${arrToDo.length}-description`, newestToDo.description);
+  localStorage.setItem(`toDo-${arrToDo.length}-dueDate`, newestToDo.dueDate); 
+  localStorage.setItem(`toDo-${arrToDo.length}-priority`, newestToDo.priority); 
 }
